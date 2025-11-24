@@ -1,8 +1,7 @@
 <template>
-  <Navbar />
-  <router-view />
+  <Shop />
 </template>
 
 <script setup>
-import Navbar from './components/Navbar.vue'
+import Shop from './views/Shop.vue'
 </script>
