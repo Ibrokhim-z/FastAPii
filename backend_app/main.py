@@ -12,7 +12,7 @@ app = FastAPI(title="Мой магазин", version="1.0")
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=["*"],    
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -24,7 +24,7 @@ ALGORITHM = "HS256"
 ACCESS_TOKEN_EXPIRE_MINUTES = 60
 
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
-oauth2_scheme = OAuth2PasswordBearer(tokenUrl="auth/login", auto_error=False)  # ← ВОТ ЭТО ГЛАВНОЕ!
+oauth2_scheme = OAuth2PasswordBearer(tokenUrl="auth/login", auto_error=False)  
 
 # === Модели с ПРИМЕРАМИ (чтобы не было "string") ===
 class UserCreate(BaseModel):
